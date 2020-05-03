@@ -1,0 +1,26 @@
+
+
+@media screen and (max-width: 900px) {
+  .main-column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dash-row-thirds, .dash-row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+
+    .col{
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .centre-col{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

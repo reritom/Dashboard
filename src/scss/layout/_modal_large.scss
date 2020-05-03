@@ -1,0 +1,95 @@
+
+@media screen and (min-width: 900px) {
+  .modal {
+    position: fixed;
+    top: 0px;
+    left: $sidebarWidth;
+    width: 100% - $sidebarWidth;
+    height: 100vh;
+    background: $sidebarColour;
+    z-index: 2;
+    opacity: 0;
+
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    -webkit-animation: fadeToNone 0.5s ease;
+    -moz-animation: fadeToNone 0.5s ease;
+    -o-animation: fadeToNone 0.5s ease;
+    animation: fadeToNone 0.5s ease;
+
+    .modal-card {
+      color: $tileBackgroundColour;
+      .modal-card-header {
+
+      }
+
+      .modal-card-body {
+        min-height: 200px;
+      }
+    }
+  }
+
+  .modal-active {
+    display: flex;
+    opacity: 0.9;
+
+    -webkit-animation: fadeInFromNone 0.5s ease;
+    -moz-animation: fadeInFromNone 0.5s ease;
+    -o-animation: fadeInFromNone 0.5s ease;
+    animation: fadeInFromNone 0.5s ease;
+  }
+
+  @-webkit-keyframes fadeInFromNone {
+    0% {display: none; opacity: 0;}
+    1% {display: block; opacity: 0;}
+    100% {display: block; opacity: 0.9;}
+  }
+
+  @-moz-keyframes fadeInFromNone {
+    0% {display: none; opacity: 0;}
+    1% {display: block; opacity: 0;}
+    100% {display: block; opacity: 0.9;}
+  }
+
+  @-o-keyframes fadeInFromNone {
+    0% {display: none; opacity: 0;}
+    1% {display: block; opacity: 0;}
+    100% {display: block; opacity: 0.9;}
+  }
+
+  @keyframes fadeInFromNone {
+    0% {display: none; opacity: 0;}
+    1% {display: block; opacity: 0;}
+    100% {display: block; opacity: 0.9;}
+  }
+
+
+
+
+  @-webkit-keyframes fadeToNone {
+    0% {display: block; opacity: 0.9;}
+    99% {display: block; opacity: 0;}
+    100% {display: none; opacity: 0;}
+  }
+
+  @-moz-keyframes fadeToNone {
+    0% {display: block; opacity: 0.9;}
+    99% {display: block; opacity: 0;}
+    100% {display: none; opacity: 0;}
+  }
+
+  @-o-keyframes fadeToNone {
+    0% {display: block; opacity: 0.9;}
+    99% {display: block; opacity: 0;}
+    100% {display: none; opacity: 0;}
+  }
+
+  @keyframes fadeToNone {
+    0% {display: block; opacity: 0.9;}
+    99% {display: block; opacity: 0;}
+    100% {display: none; opacity: 0;}
+  }
+}

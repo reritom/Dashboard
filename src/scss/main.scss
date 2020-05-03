@@ -1,0 +1,19 @@
+@import "abstracts/variables", "abstracts/themes";
+@import "layout/base_large", "layout/grid_large", "layout/base_mobile", "layout/grid_mobile";
+@import "layout/modal_large", "layout/modal_mobile";
+@import "components/card", "components/cycle_svg";
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina+2');
+
+
+
+html {
+  font-family: 'Baloo Bhaina 2', cursive;
+  background: var(--background-color);
+  margin: 0px;
+  padding: 0px;
+}
+
+body, main {
+  padding: 0px;
+  margin: 0px;
+}

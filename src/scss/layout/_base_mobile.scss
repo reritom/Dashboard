@@ -1,0 +1,140 @@
+
+
+@media screen and (max-width: 900px) {
+  .content {
+    margin: 0px;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+
+    background: var(--background-color);
+    width: 100vw;
+
+    .section-body {
+      padding: 0px;
+
+      .section-top {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .section-header {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-size: 2em;
+          font-weight: 200;
+          color: #7E7F9A;
+        }
+
+        .section-sub-header {
+          font-size: 1em;
+          font-weight: lighter;
+          color: #7E7F9A;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: var(--navbar-color);
+    font-size: 1em;
+    min-height: 50px;
+
+    &.collapsed{
+      .links {
+        max-height: 0px;
+        overflow: hidden;
+        padding-bottom: 0px;
+        // Transition when the links are collapsing
+        transition: all 0.75s ease-out;
+      }
+    }
+
+    &:not(.collapsed){
+      .links {
+        max-height: 100vh;
+        padding-bottom: 20px;
+        overflow: hidden;
+        // Transition when the links are expanding
+        transition: max-height 1s ease;
+      }
+    }
+
+    .toggle {
+      color: $tileBackgroundColour;
+      cursor: pointer;
+    }
+
+    .header{
+      padding-left: 20px;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 50px;
+
+      h1 {
+        position: relative;
+        top: 5px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 1em;
+        font-weight: lighter;
+        font-size: 2em;
+        color: $tileBackgroundColour;
+      }
+      span {
+        margin: auto;
+      }
+    }
+
+    .links {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 0px;
+
+      .break{
+        width: 75%;
+      }
+
+      li {
+        position: relative;
+        text-align: center;
+
+        a {
+          line-height: 2em;
+          font-size: 1.5em;
+          text-decoration: none;
+          letter-spacing: 0.2em;
+          color: rgba(#FFF, 0.35);
+          display: block;
+          transition: all ease-out 300ms;
+        }
+
+        &.active a {
+          color: white;
+        }
+
+        &:not(.active)::after {
+          opacity: 0.2;
+        }
+
+        &:not(.active):hover a {
+          color: rgba(#FFF, 0.75);
+        }
+      }
+    }
+  }
+}
