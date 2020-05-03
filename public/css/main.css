@@ -90,11 +90,12 @@
           color: rgba(255, 255, 255, 0.35);
           display: block;
           transition: all ease-out 300ms; }
-        .navbar .links li.active a {
+        .navbar .links li a.active {
           color: white; }
-        .navbar .links li:not(.active)::after {
-          opacity: 0.2; }
-        .navbar .links li:not(.active):hover a {
+        .navbar .links li a:not(.active)::after {
+          opacity: 0.2;
+          color: rgba(255, 255, 255, 0.35); }
+        .navbar .links li a:not(.active):hover {
           color: rgba(255, 255, 255, 0.75); } }
 
 @media screen and (min-width: 900px) {
@@ -109,8 +110,7 @@
     justify-content: space-between;
     padding: 0px; }
     .dash-row .col {
-      width: 100%;
-      height: 150px; }
+      width: 100%; }
     .dash-row .centre-col {
       display: flex;
       align-items: center;
@@ -469,6 +469,8 @@
   background-color: #FDFFFC;
   position: relative;
   height: 100%; }
+  .card.card-block {
+    width: 100%; }
   @media screen and (min-width: 900px) {
     .card {
       border-radius: 0.25em;
@@ -496,8 +498,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between; }
-    .card .card-header-menu h1 {
+    .card .card-header-menu h1, .card .card-header-menu .sub-text {
       padding: 0px;
+      padding-right: 10px;
       font-size: 1em;
       color: #7E7F9A;
       font-weight: lighter; }
@@ -584,8 +587,7 @@
 @media screen and (max-width: 900px) {
   .svg-wrapper {
     background-color: #FDFFFC;
-    width: 100%;
-    height: 100%; } }
+    width: 100%; } }
 
 .svg-ellipse {
   stroke-width: 2px;

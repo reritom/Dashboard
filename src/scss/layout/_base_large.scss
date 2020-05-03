@@ -98,15 +98,16 @@
           transition: all ease-out 300ms;
         }
 
-        &.active a {
+        a.active {
           color: white;
         }
 
-        &:not(.active)::after {
+        a:not(.active)::after {
           opacity: 0.2;
+          color: rgba(#FFF, 0.35);
         }
 
-        &:not(.active):hover a {
+        a:not(.active):hover {
           color: rgba(#FFF, 0.75);
         }
       }

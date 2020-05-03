@@ -6,7 +6,7 @@
         <i @click="showNav=!showNav" href="#" class="fas fa-bars fa-2x toggle"></i>
       </div>
       <ul role="navigation" class="links">
-        <li class="active"><router-link :to="{'name': 'home'}">Cycle</router-link></li>
+        <li><router-link :to="{'name': 'home'}" exact>Cycle</router-link></li>
         <li><router-link to="functions">Functions</router-link></li>
         <li><a href="#">Data</a></li>
         <li class="break"><hr></li>
